@@ -1,0 +1,76 @@
+hyang-git
+924763498@qq.com
+yangh18584228376
+
+
+生成ssh(Bad escape character 'ygen'.   报错原因:ssh -keygen之间出现了空格，正确命令是没有空格的。)
+ssh-keygen -t rsa -C "924763498@qq.com"
+
+hyang@DESKTOP-5K4KV5Q MINGW64 ~/.ssh
+$ pwd
+/c/Users/hyang/.ssh
+
+hyang@DESKTOP-5K4KV5Q MINGW64 ~/.ssh
+$ ll
+total 9
+-rw-r--r-- 1 hyang 197121 1823 12月 23 11:16 id_rsa
+-rw-r--r-- 1 hyang 197121  398 12月 23 11:16 id_rsa.pub
+-rw-r--r-- 1 hyang 197121  802 12月 23 11:11 known_hosts
+
+hyang@DESKTOP-5K4KV5Q MINGW64 ~/.ssh
+$ cat id_rsa.pub
+
+
+
+
+本地是否与GitHub联通
+ssh -T git@github.com
+
+
+
+
+//////添加远程仓库
+git remote add origin git@github.com:hyang-git/demo1.git
+git pull origin master 
+git push -u orgin master
+
+
+…or create a new repository on the command line
+ 
+echo "# firstRepo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/hyang-git/firstRepo.git
+git push -u origin master
+
+
+
+克隆,如下: 如果出现 .git/ 文件夹不能再此文件夹克隆了
+hyang@DESKTOP-5K4KV5Q MINGW64 /d/E/git/repo/demo1 (master)
+$ ls -a
+./  ../  .git/  README.md  README.md.bak  workFile1.txt  workFile2.txt
+
+
+git clone https://github.com/hyang-git/firstRepo.git
+
+
+分支:
+git branch feature
+git checkout feature   切换分支
+
+从 feature 合并到 master 分支
+1. 切换到master 分支  git checkout master
+2. git merge feature 
+git branch -d feature   删除feature 分支
+
+
+
+
+
+
+
+
+
+
+
